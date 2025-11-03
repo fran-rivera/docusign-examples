@@ -141,11 +141,11 @@ public class TriggerWorkflowService {
     //ds-snippet-end:Maestro1Step4
 
     //ds-snippet-start:Maestro1Step5
-w = new TriggerWorkflow(instanceName, triggerInputs);
+        TriggerWorkflow w = new TriggerWorkflow(instanceName, triggerInputs);
 
         return client.maestro()
                 .workflows()
-                .triggerWorkflow(accountId, workflowId, triggerWorkflow);
+                .triggerWorkflow(accountId, workflowId, w);
     }
     //ds-snippet-end:Maestro1Step5
 
